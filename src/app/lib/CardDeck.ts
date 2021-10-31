@@ -1,6 +1,6 @@
 export class Card {
-  rank: string;
-  suit: string;
+  rank;
+  suit;
   constructor(rank: string, suit: string) {
     this.rank = rank;
     this.suit = suit;
@@ -23,13 +23,12 @@ export class Card {
 
 export class CardDeck{
   cards: Card[] = [];
+  RANKS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+  SUITS = ['diams', 'hearts', 'clubs', 'spades'];
   constructor() {
-    const RANKS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-    const SUITS = ['diams', 'hearts', 'clubs', 'spades'];
-
-    for (let i = 0; i < 12; i++) {
-      for (let j = 0; j < 3; j++) {
-        this.cards.push(new Card(RANKS[i], SUITS[j]))
+    for (let i = 0; i < 13; i++) {
+      for (let j = 0; j < 4; j++) {
+        this.cards.push(new Card(this.RANKS[i], this.SUITS[j]));
       }
     }
   }

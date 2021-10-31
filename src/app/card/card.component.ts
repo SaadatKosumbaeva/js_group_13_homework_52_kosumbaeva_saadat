@@ -18,7 +18,8 @@ export class CardComponent {
       case 'diams': return '♦';
       case 'hearts': return '♥';
       case 'clubs': return '♣';
-      default: return '♠';
+      case 'spades': return '♠';
+      default: return;
     }
   }
 }

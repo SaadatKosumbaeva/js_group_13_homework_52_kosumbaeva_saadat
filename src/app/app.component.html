@@ -2,3 +2,11 @@
   <app-card *ngFor="let card of cardsArray" [rank]="card.rank" [suit]="card.suit"></app-card>
 </div>
 
+<hr/>
+
+<p>Score: {{points}}</p>
+
+<button (click)="giveAnotherCard()" [disabled]="disabled">Give another card</button>
+<button (click)="reset()">Reset</button>
+
+<p>{{gameStatus}}</p>
